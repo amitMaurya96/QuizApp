@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - Quizzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkAuth()">
+    <div class="container">
+        <h1>Teacher Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+
+        <h2>Create a Quiz</h2>
+        <input type="text" id="quiz-title" placeholder="Enter Quiz Title">
+        <button onclick="createQuiz()">Create Quiz</button>
+
+        <div id="quiz-section" style="display: none;">
+            <h3>Add Questions</h3>
+            <input type="text" id="question-text" placeholder="Enter Question">
+            <input type="text" id="option1" placeholder="Option 1">
+            <input type="text" id="option2" placeholder="Option 2">
+            <input type="text" id="option3" placeholder="Option 3">
+            <input type="text" id="option4" placeholder="Option 4">
+            <input type="text" id="correct-answer" placeholder="Correct Answer">
+
+            <button onclick="addQuestion()">Add Question</button>
+
+            <h3>Questions Added</h3>
+            <ul id="question-list"></ul>
+
+            <button onclick="saveQuiz()">Save Quiz</button>
+        </div>
+
+        <h3>Quiz Code:</h3>
+        <p id="quiz-code"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

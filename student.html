@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Quizzer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="checkAuth()">
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <button class="logout-btn" onclick="logout()">Logout</button> <!-- Logout Button -->
+
+        <h2>Take a Quiz</h2>
+        <input type="text" id="quiz-link" placeholder="Enter Quiz Code">
+        <button onclick="startQuiz()">Start Quiz</button>
+
+        <h3>Available Quizzes</h3>
+        <div id="quiz-list"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
